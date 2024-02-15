@@ -1,0 +1,10 @@
+var input = require("fs").readFileSync("index.txt", "utf8");
+var lines = input.trim().split(" ").map(Number);
+console.log(input[0]);
+console.log(input[1]);
+console.log(input[2]);
+console.log(lines[0]);
+var table = [4.0, 4.5, 5.0, 2.0, 1.5];
+var calicurate = table[lines[0] - 1] * lines[1];
+console.log(calicurate);
+console.log("Total: R$ ".concat(calicurate.toFixed(2)));
