@@ -1,6 +1,11 @@
+// problem: https://www.beecrowd.com.br/judge/en/problems/view/1009
 const array = [0, 500.0, 1230.3];
 
-var input = require("fs").readFileSync("index.txt", "utf8");
+import * as path from "path";
+
+// Construct an absolute path to 'index.txt'
+const filePath: string = path.join(__dirname, "index.txt");
+var input = require("fs").readFileSync(filePath, "utf8");
 var lines = input.split("\n");
 
 console.log(lines[1]);

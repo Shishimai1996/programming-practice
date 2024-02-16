@@ -1,6 +1,11 @@
-var input = require("fs").readFileSync("index.txt", "utf8");
+//problem: https://www.beecrowd.com.br/judge/en/problems/view/1012
+import * as path from "path";
+
+// Construct an absolute path to 'index.txt'
+const filePath: string = path.join(__dirname, "index.txt");
+var input = require("fs").readFileSync(filePath, "utf8");
 var lines = input.split("\n");
-var numbers = input.split(" ");
+var number = input.split(" ");
 
 /**
  * Escreva a sua solução aqui
@@ -8,12 +13,12 @@ var numbers = input.split(" ");
  * Escriba su solución aquí
  */
 
-const triangle = (Number(numbers[0]) * Number(numbers[2])) / 2;
-const circle = Number(numbers[2]) ** 2 * 3.14159;
+const triangle = (Number(number[0]) * Number(number[2])) / 2;
+const circle = Number(number[2]) ** 2 * 3.14159;
 const trapezium =
-  ((Number(numbers[0]) + Number(numbers[1])) * Number(numbers[2])) / 2;
-const square = Number(numbers[1]) ** 2;
-const rectangle = Number(numbers[0]) * Number(numbers[1]);
+  ((Number(number[0]) + Number(number[1])) * Number(number[2])) / 2;
+const square = Number(number[1]) ** 2;
+const rectangle = Number(number[0]) * Number(number[1]);
 
 console.log(`TRIANGULO: ${triangle.toFixed(3)}
 CIRCULO: ${circle.toFixed(3)}

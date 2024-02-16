@@ -1,3 +1,5 @@
+// https://www.beecrowd.com.br/judge/en/problems/view/1019
+
 /**
  * Escreva a sua solução aqui
  * Code your solution here
@@ -20,7 +22,11 @@
 // else if X>3600
 // parseInt(X/3600):parseInt((X-(X/3600))*60):X-(X-(X/3600))*60
 
-var input = require("fs").readFileSync("index.txt", "utf8");
+import * as path from "path";
+
+// Construct an absolute path to 'index.txt'
+const filePath: string = path.join(__dirname, "index.txt");
+var input = require("fs").readFileSync(filePath, "utf8");
 var lines = input.split("\n");
 console.log(input);
 
