@@ -1,11 +1,11 @@
-// beecrowd | 1015
+// beecrowd | 1015 https://www.beecrowd.com.br/judge/en/problems/view/1015
 // Distance Between Two Points
 // Adapted by Neilor Tonin, URI  Brazil
 
 // Timelimit: 1
 // Read the four values corresponding to the x and y axes of two points in the plane, p1 (x1, y1) and p2 (x2, y2) and calculate the distance between them, showing four decimal places after the comma, according to the formula:
 
-// Distance = 
+// Distance =
 
 // Input
 // The input file contains two lines of data. The first one contains two double values: x1 y1 and the second one also contains two double values with one digit after the decimal point: x2 y2.
@@ -30,7 +30,6 @@
 // 16.4575
 const fs = require("fs");
 const path = require("path");
-​
 // Read input from file
 // const inputFile = "input.txt";
 const inputFile = path.join(__dirname, "input.txt");
@@ -41,7 +40,7 @@ const input = fs.readFileSync(inputFile, "utf8").trim().split("\n");
  * Code your solution here
  * Escriba su solución aquí
  */
- //1.0 7.0 = a
+//1.0 7.0 = a
 const a = lines[0];
 const b = lines[1];
 //[1.0,7.0] = a

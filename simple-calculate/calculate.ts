@@ -1,4 +1,10 @@
-var input = require("fs").readFileSync("/dev/stdin", "utf8");
+// https://judge.beecrowd.com/en/problems/view/1010
+
+import * as path from "path";
+
+// Construct an absolute path to 'index.txt'
+const filePath: string = path.join(__dirname, "index.txt");
+var input = require("fs").readFileSync(filePath, "utf8");
 var lines = input.split("\n");
 
 /**
