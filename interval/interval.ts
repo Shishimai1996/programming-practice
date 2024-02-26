@@ -1,3 +1,4 @@
+//https://judge.beecrowd.com/en/problems/view/1037
 import * as path from "path";
 
 // Construct an absolute path to 'index.txt'
