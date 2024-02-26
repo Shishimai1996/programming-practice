@@ -21,12 +21,10 @@ const findGreatest = (a: any, b: any) => {
 
 const compareNumbers = () => {
   const first = findGreatest(numbers[0], numbers[1]);
-  const second = findGreatest(first, numbers[2]);
-  if (first > second) {
-    console.log(`${first} eh o maior`);
-  } else if (first < second) {
-    console.log(`${second} eh o maior`);
-  }
+  console.log(first);
+  const greatest = findGreatest(first, numbers[2]);
+
+  console.log(`${greatest} eh o maior`);
 };
 
 compareNumbers();
