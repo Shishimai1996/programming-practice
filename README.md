@@ -3,6 +3,7 @@
  This repository includes the answers of beecrowd problems.
  https://judge.beecrowd.com/en/problems/index/1
 
+problems link will be in the first line of .ts file.
 ### How to run the code
 
 Execute ts file directly
