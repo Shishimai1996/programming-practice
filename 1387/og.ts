@@ -51,3 +51,21 @@ function solution() {
   //   console.log(result);
 }
 solution();
+
+// const filePath: string = path.join(__dirname, "index.txt");
+// var input = require("fs").readFileSync(filePath, "utf8");
+// var lines = input.split("\n");
+
+// const og = (lines: string) => {
+//   let result = "";
+//   for (let i = 0; i < lines.length; i++) {
+//     const [L, R] = lines[i].split(" ").map(Number);
+//     if (L === 0 && R === 0) break;
+//     const calculate = L + R;
+//     result += calculate + "\n";
+//   }
+//   return result;
+// };
+
+// const calculations = og(lines);
+// console.log(calculations);
