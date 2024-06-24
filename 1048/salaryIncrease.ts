@@ -5,64 +5,33 @@ import * as path from "path";
 // Construct an absolute path to 'index.txt'
 const filePath: string = path.join(__dirname, "index.txt");
 var input = require("fs").readFileSync(filePath, "utf8").trim();
-console.log(input);
 
-// var lines = input.split("\n");
-// console.log(lines);
-
-const number: number = parseFloat(input);
-console.log(number);
-const salary = () => {
+const salary = (number: number) => {
   if (number >= 0 && number <= 400) {
-    console.log(
-      "Novo salario: " +
-        `${(number + number * 0.15).toFixed(2)}` +
-        "\n" +
-        "Reajuste ganho: " +
-        `${(number * 0.15).toFixed(2)}` +
-        "\n" +
-        "Em percentual: 15 %"
-    );
+    return 15;
   } else if (number > 400 && number <= 800) {
-    console.log(
-      "Novo salario: " +
-        `${(number + number * 0.12).toFixed(2)}` +
-        "\n" +
-        "Reajuste ganho: " +
-        `${(number * 0.12).toFixed(2)}` +
-        "\n" +
-        "Em percentual: 12 %"
-    );
+    return 12;
   } else if (number > 800 && number <= 1200) {
-    console.log(
-      "Novo salario: " +
-        `${(number + number * 0.1).toFixed(2)}` +
-        "\n" +
-        "Reajuste ganho: " +
-        `${(number * 0.1).toFixed(2)}` +
-        "\n" +
-        "Em percentual: 10 %"
-    );
+    return 10;
   } else if (number > 1200 && number <= 2000) {
-    console.log(
-      "Novo salario: " +
-        `${(number + number * 0.07).toFixed(2)}` +
-        "\n" +
-        "Reajuste ganho: " +
-        `${(number * 0.07).toFixed(2)}` +
-        "\n" +
-        "Em percentual: 7 %"
-    );
-  } else if (number >= 2000) {
-    console.log(
-      "Novo salario: " +
-        `${(number + number * 0.04).toFixed(2)}` +
-        "\n" +
-        "Reajuste ganho: " +
-        `${(number * 0.04).toFixed(2)}` +
-        "\n" +
-        "Em percentual: 4 %"
-    );
+    return 7;
+  } else {
+    return 4;
   }
 };
-salary();
+
+const result = () => {
+  const number: number = parseFloat(input);
+  const percent = salary(number);
+  return console.log(
+    "Novo salario: " +
+      `${(number + number * percent * 0.01).toFixed(2)}` +
+      "\n" +
+      "Reajuste ganho: " +
+      `${(number * percent * 0.01).toFixed(2)}` +
+      "\n" +
+      `Em percentual: ${percent} %`
+  );
+};
+
+result();
